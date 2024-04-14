@@ -1,0 +1,79 @@
+.subscribe {
+    background-color: var(--color-gray-100);
+    padding: 4rem 0;
+  
+    .container {
+      width: 65%;
+  
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        
+
+        h2 {
+            font-weight: 900;
+            font-size: 2rem;
+        }
+
+        
+      
+      }
+  
+      form {
+        font-size: 0.9rem;
+        .alternative {
+          display: grid;
+          grid-template-columns: 1fr 3fr;
+          align-items: center;
+          align-content: center;
+          margin-bottom: 30px;
+  
+          .options {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+          }
+
+          h4 {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+          }
+        }
+  
+        .email {
+
+          display: grid;
+          align-items: start;
+          grid-template-columns: 1fr auto;
+          gap: 1.5rem;
+          font-size: 1.1rem;
+  
+
+          .input-group {
+            position: relative;
+            
+  
+            i {
+              position: absolute;
+              left: 20px;
+              top: 17px;
+              font-size: 1.3em;
+              color: var(--color-gray-500);
+            }
+  
+            input {
+              padding-left: 55px;
+    
+            }
+          }
+
+          button {
+           
+            font-size: 1.1rem;
+            padding: 17px 35px;
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,13 @@
+﻿@model SubscriberSection
+
+<section class="subscribe" id="subscribe">
+    <div class="container">
+        <div class="title">
+            <h2>@Model.Title</h2>
+            <img src="@Model.Image.Url" alt="@Model.Image.AltText" />
+        </div>
+        <partial name="Sections/_SubscriberForm" model="@Model.SubscriptionForm"/>
+        <p>@TempData["Status"]?.ToString()</p>
+    </div>
+    
+</section>

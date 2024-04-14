@@ -1,0 +1,30 @@
+﻿@model CourseCard
+
+<div class="course-card">
+    <div class="img-section">
+        <img class="course-img" src="@Model.Image.Url" alt="@Model.Image.AltText">
+        <img class="pinned-icon" src="images/icons/pinned.svg" alt="">
+        @if (Model.IsBestSeller)
+        {
+        <img class="best-seller-icon" src="images/courses/bestseller-badge.svg" alt="bestseller">
+        }
+
+    </div>
+    <div class="course-content">
+        <h4>@Model.Title</h4>
+        <p class="by">By @Model.GetAuthorNames()</p>
+        @if (Model.DiscountPrice != null)
+        {
+            <p class="price discount-price">@Model.DiscountPrice <span class="prev-price">@Model.OriginalPrice</span></p>
+        }
+        else
+        {
+            <p class="price">@Model.OriginalPrice</p>
+        }
+
+    </div>
+    <div class="course-stats">
+        <p class="hours"><img src="images/icons/clock.svg" alt="clock">@Model.Hours hours</p>
+        <p class="likes"><img src="images/icons/like.svg" alt="likes">@Model.LikesInProcent (@Model.NumberOfLikes)</p>
+    </div>
+</div>

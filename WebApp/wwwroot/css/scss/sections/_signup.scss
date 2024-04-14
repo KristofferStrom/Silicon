@@ -1,0 +1,49 @@
+.signup {
+    
+    margin-top: 60px;
+    .container {
+        width: 430px;
+
+        .section-header  {
+
+            margin-bottom: 40px;
+            .section-title {
+                margin-bottom: 0;
+                font-size: 2.2rem;
+                font-weight: 900;
+            }
+
+            p {
+                a {
+                    color: var(--color-theme);
+                }
+            }
+        }
+
+        .signup-section {
+            form {
+                .form-group {
+                    display: flex;
+                    gap: 20px;
+                }
+                
+                .input-group {
+                    .text-label {
+                        font-weight: 900;
+                    }
+                    .text-input {
+                        margin-top: 5px;
+                        height: 70%;
+                    }
+
+                    label {
+                        a {
+                            color: var(--color-theme);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

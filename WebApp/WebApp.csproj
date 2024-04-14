@@ -1,0 +1,77 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\images\brands\brand_1.svg" />
+    <None Include="wwwroot\images\brands\brand_2.svg" />
+    <None Include="wwwroot\images\brands\brand_3.svg" />
+    <None Include="wwwroot\images\brands\brand_4.svg" />
+    <None Include="wwwroot\images\courses\bestseller-badge.svg" />
+    <None Include="wwwroot\images\courses\course_1.svg" />
+    <None Include="wwwroot\images\courses\course_2.svg" />
+    <None Include="wwwroot\images\courses\course_3.svg" />
+    <None Include="wwwroot\images\courses\course_4.svg" />
+    <None Include="wwwroot\images\courses\course_5.svg" />
+    <None Include="wwwroot\images\courses\course_6.svg" />
+    <None Include="wwwroot\images\courses\course_7.svg" />
+    <None Include="wwwroot\images\courses\course_8.svg" />
+    <None Include="wwwroot\images\courses\course_9.svg" />
+    <None Include="wwwroot\images\icons\add-group.svg" />
+    <None Include="wwwroot\images\icons\arrows.svg" />
+    <None Include="wwwroot\images\icons\bell.svg" />
+    <None Include="wwwroot\images\icons\bx-check-circle.svg" />
+    <None Include="wwwroot\images\icons\chat.svg" />
+    <None Include="wwwroot\images\icons\clock.svg" />
+    <None Include="wwwroot\images\icons\double-arrow-right.svg" />
+    <None Include="wwwroot\images\icons\Dropbox.svg" />
+    <None Include="wwwroot\images\icons\Evernote.svg" />
+    <None Include="wwwroot\images\icons\facebook-square.svg" />
+    <None Include="wwwroot\images\icons\google.svg" />
+    <None Include="wwwroot\images\icons\Home.svg" />
+    <None Include="wwwroot\images\icons\instagram-alt.svg" />
+    <None Include="wwwroot\images\icons\like.svg" />
+    <None Include="wwwroot\images\icons\logout-icon.svg" />
+    <None Include="wwwroot\images\icons\mail.svg" />
+    <None Include="wwwroot\images\icons\MailChimp.svg" />
+    <None Include="wwwroot\images\icons\pinned.svg" />
+    <None Include="wwwroot\images\icons\presentation.svg" />
+    <None Include="wwwroot\images\icons\search.svg" />
+    <None Include="wwwroot\images\icons\settings-icon.svg" />
+    <None Include="wwwroot\images\icons\shield.svg" />
+    <None Include="wwwroot\images\icons\Slack.svg" />
+    <None Include="wwwroot\images\icons\tests.svg" />
+    <None Include="wwwroot\images\icons\trello.svg" />
+    <None Include="wwwroot\images\icons\twitter.svg" />
+    <None Include="wwwroot\images\icons\youtube.svg" />
+    <None Include="wwwroot\images\icons\zoom.svg" />
+    <None Include="wwwroot\images\silicon-logo-light_theme.svg" />
+    <None Include="wwwroot\images\taskmaster-twisted.svg" />
+    <None Include="wwwroot\images\taskmaster.svg" />
+    <None Include="wwwroot\images\user-full.svg" />
+    <None Include="wwwroot\images\user-small.svg" />
+    <None Include="wwwroot\images\WorkWithUs.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

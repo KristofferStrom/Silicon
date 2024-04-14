@@ -1,0 +1,11 @@
+﻿@model HomeIndexViewModel
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<partial name="~/Views/Shared/Sections/_Showcase.cshtml" model="@Model.ShowcaseSection" />
+<partial name="~/Views/Shared/Sections/_Features.cshtml" model="@Model.FeaturesSection" />
+<partial name="~/Views/Shared/Sections/_Taskmaster.cshtml" model="@Model.TaskmasterSection" />
+<partial name="~/Views/Shared/Sections/_Worktools.cshtml" model="@Model.WorktoolsSection" />
+<partial name="~/Views/Shared/Sections/_Subscriber.cshtml" id="subscribe" model="@Model.SubscriberSection" />

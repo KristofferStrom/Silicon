@@ -1,0 +1,49 @@
+﻿@model SignInForm
+
+@{
+    Layout = "_SecondLayout";
+    ViewData["Title"] = "Sign In";
+}
+
+
+<section class="login">
+          <div class="container">
+            @if (!string.IsNullOrEmpty(ViewData["StatusMessage"]?.ToString()))
+            {
+                <alert class="alert alert-danger">
+                    <div class="container">
+                        @ViewData["StatusMessage"]
+                    </div>
+                </alert>
+            }
+            <div class="section-header">
+              <h1 class="section-title">Welcome Back</h1>
+              <p>Don't have an account yet? <a asp-action="SignUp" asp-controller="Auth">Sign up here.</a></p>
+            </div>
+
+            <div class="login-section">
+            <form method="post" asp-action="SignIn" asp-controller="Auth" asp-route-ReturnUrl="@ViewData["ReturnUrl"]" novalidate>
+                <div id="email" class="input-group">
+                    <label asp-for="Email"></label>
+                    <input class="text-input" asp-for="Email" />
+                </div>
+                <div id="password" class="input-group">
+                    <label asp-for="Password"></label>
+                    <input class="text-input" asp-for="Password" />
+                </div>
+
+                <div id="rememberMe" class="checkbox-group">
+                  <div class="input-group">
+                        <input asp-for="IsPresistent" />
+                        <label asp-for="IsPresistent">
+                            Keep me signed in.
+                        </label>
+                  </div>
+                </div>
+
+                <button id="btn-submit" class="btn btn-theme" type="submit">Sign in</button>
+              </form>
+              <a class="forgot-password" href="#">Forgot your password?</a>
+            </div>
+          </div>
+        </section>

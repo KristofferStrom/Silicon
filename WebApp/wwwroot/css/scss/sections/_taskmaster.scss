@@ -1,0 +1,79 @@
+.taskmaster {
+  .container {
+    display: block;
+
+    gap: 20px;
+
+    @include xl {
+      display: flex;
+      gap: 30px;
+    }
+
+    .taskmaster-image {
+      @include xl {
+      }
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+
+        @include xl {
+        }
+      }
+    }
+
+    .content {
+      display: grid;
+
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+
+      @include xl {
+        width: auto;
+        height: 80%;
+        margin-top: 50px;
+      }
+
+      .section-title {
+        color: var(--color-gray-900);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        @include xl {
+          justify-content: left;
+          font-size: 2rem;
+        }
+
+        h2 {
+          @include xl {
+            text-align: left;
+            font-size: 2rem;
+            font-weight: 900;
+          }
+        }
+      }
+      .selling-arguments {
+        .argument-item {
+          display: flex;
+          img {
+            margin-right: 8px;
+          }
+        }
+      }
+
+      .btn-learn-more {
+        margin-top: 10px;
+        button {
+          font-size: 1rem;
+          i {
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+}

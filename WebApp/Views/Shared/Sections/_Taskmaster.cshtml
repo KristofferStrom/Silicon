@@ -1,0 +1,28 @@
+﻿@model TaskmasterSection
+
+<section class="taskmaster">
+    <div class="container">
+        <div class="taskmaster-image">
+            <img src="@Model.Image.Url" alt="@Model.Image.AltText" />
+        </div>
+
+        <div class="content">
+            <div class="section-title">
+                <h2>@Model.Title</h2>
+            </div>
+
+            <div class="selling-arguments">
+                @foreach (var argument in Model.SellingArguments)
+                {
+                    <partial name="~/Views/Shared/Components/_SellingArgument.cshtml" model="argument" />
+                }
+                
+            </div>
+            <div class="btn-learn-more">
+                <button class="btn btn-theme">
+                    @Model.LearnMoreButton.Text <i class="fa-regular fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

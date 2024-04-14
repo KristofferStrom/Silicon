@@ -1,0 +1,69 @@
+﻿@model SignUpForm
+
+@{
+    Layout = "_SecondLayout";
+    ViewData["Title"] = "Sign Up";
+}
+
+<section class="signup">
+                <div class="container">
+                    <div class="section-header">
+                        <h1 class="section-title">Create Account</h1>
+                        <p>Already have an account?<a asp-action="SignIn" asp-controller="Auth"> Sign in here.</a></p>
+                    </div>
+
+                    <div class="signup-section">
+                        @if (!string.IsNullOrEmpty(ViewData["StatusMessage"]?.ToString()))
+                        {
+                            <alert class="alert alert-danger">
+                                <div class="container">
+                                    @ViewData["StatusMessage"]
+                                </div>
+                            </alert>
+                        }
+                        <form method="post" asp-action="SignUp" asp-controller="Auth" class="validate">
+                            <div class="form-group">
+                                <div id="firstName" class="input-group">
+                                    <label asp-for="FirstName" class="text-label"></label>
+                                    <input asp-for="FirstName" class="text-input">
+                                    <span asp-validation-for="FirstName"></span>
+                                </div>
+                            <div id="lastName" class="input-group">
+                                    <label asp-for="LastName" class="text-label"></label>
+                                    <input asp-for="LastName" class="text-input">
+                                    <span asp-validation-for="LastName"></span>
+                                </div>
+                            </div>
+
+                            <div id="email" class="input-group">
+                                <label asp-for="Email" class="text-label"></label>
+                    <input asp-for="Email" class="text-input" data-val="true" data-val-regex="The Email field is not a valid e-mail address.">
+                                <span asp-validation-for="Email"></span>
+                            </div>
+                            <div id="password" class="input-group">
+                                <label asp-for="Password" class="text-label">Password</label>
+                                <input asp-for="Password" class="text-input">
+                                <span asp-validation-for="Password"></span>
+                            </div>
+                            <div id="confirm" class="input-group">
+                                <label asp-for="ConfirmPassword" class="text-label"></label>
+                                <input asp-for="ConfirmPassword" />
+                                <span asp-validation-for="ConfirmPassword"></span>
+                            </div>
+
+                            <div id="terms" class="checkbox-group">
+                                <div class="input-group">
+                                    <input asp-for="Terms" />
+                                    <label asp-for="Terms">
+                                        I accept the <a asp-action="TermsAndConditions" asp-controller="About">Terms & Conditions</a>.
+                                    </label>
+                                    
+                                </div>
+                                <span asp-validation-for="Terms"></span>
+                            </div>
+
+                            <button id="btn-submit" class="btn btn-theme" type="submit">Sign up</button>
+                        </form>
+                    </div>
+                </div>
+            </section>

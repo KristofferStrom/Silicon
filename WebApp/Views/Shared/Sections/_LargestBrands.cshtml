@@ -1,0 +1,11 @@
+﻿@model LargestBrandsSection
+
+<div class="largest-brands">
+    <h6>@Model.Title</h6>
+    <div class="brands">
+        @foreach(var image in Model.BrandImages)
+        {
+            <img class="brand" src="@image.Url" alt="@image.AltText">
+        }
+    </div>
+</div>
