@@ -48,7 +48,7 @@
     <div class="email">
         <div class="input-group">
             <i class="fa-regular fa-envelope"></i>
-            <input asp-for="Email" />
+            <input asp-for="Email" data-val="true" data-val-regex="The Email field is not a valid e-mail address." />
             <span asp-validation-for="Email"></span>
         </div>
         <button class="btn btn-theme" type="@Model.SubmitButton.Type">@Model.SubmitButton.Text</button>
