@@ -18,11 +18,11 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-using (var scope = app.Services.CreateScope())
-{
-    var context = scope.ServiceProvider.GetRequiredService<ApplicationIdentityContext>();
-    DataInitializer.InitializeData(context);
-}
+//using (var scope = app.Services.CreateScope())
+//{
+//    var context = scope.ServiceProvider.GetRequiredService<ApplicationIdentityContext>();
+//    DataInitializer.InitializeData(context);
+//}
 
 
 app.Run();
